@@ -1,15 +1,21 @@
+import test from 'ava';
+
 import clone from '../deep-clone';
 
-describe('deep-clone', () => {
-  it('works with objects', () => {
-    const obj = { a: 1, b: 2 };
+test('object', t => {
+  const original = { a: 1, b: 2 };
+  const cloned = clone(original);
 
-    expect(clone(obj)).not.toBe(obj);
-  });
+  t.plan(2);
+  t.deepEqual(cloned, original);
+  t.not(cloned, original);
+});
 
-  it('works with arrays', () => {
-    const arr = [1, 2, 3];
+test('arrays', t => {
+  const original = [1, 2, 3];
+  const cloned = clone(original);
 
-    expect(clone(arr)).not.toBe(arr);
-  });
+  t.plan(2);
+  t.deepEqual(cloned, original);
+  t.not(cloned, original);
 });
