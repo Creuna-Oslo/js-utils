@@ -1,0 +1,9 @@
+#tests
+__tests__
+
+#other
+.babelrc
+.eslintrc.json
+.gitignore
+.npmrc
+yarn.lock
