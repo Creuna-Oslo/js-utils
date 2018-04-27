@@ -1,6 +1,7 @@
 # Creuna js utils
 
 [![npm version](https://img.shields.io/npm/v/@creuna/utils.svg?style=flat)](https://www.npmjs.com/package/@creuna/utils)
+[![travis build](https://travis-ci.org/Creuna-Oslo/js-utils.svg?branch=master)](https://travis-ci.org/Creuna-Oslo/js-utils)
 
 A collection of useful js utility functions.
 
