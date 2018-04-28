@@ -1,7 +1,7 @@
+import test from 'ava';
+
 import kebabToPascal from '../kebab-to-pascal';
 
-describe('kebab-to-pascal', () => {
-  it('works', () => {
-    expect(kebabToPascal('kebab-to-pascal')).toBe('KebabToPascal');
-  });
+test('kebab-to-pascal', t => {
+  t.is(kebabToPascal('kebab-to-pascal'), 'KebabToPascal');
 });

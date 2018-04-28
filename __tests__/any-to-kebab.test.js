@@ -1,9 +1,10 @@
+import test from 'ava';
+
 import anyToKebab from '../any-to-kebab';
 
-describe('any-to-kebab', () => {
-  it('works', () => {
-    expect(anyToKebab('PascalCase')).toBe('pascal-case');
-    expect(anyToKebab('camelCase')).toBe('camel-case');
-    expect(anyToKebab('kebab-case')).toBe('kebab-case');
-  });
+test('any-to-kebab', t => {
+  t.plan(3);
+  t.is(anyToKebab('PascalCase'), 'pascal-case');
+  t.is(anyToKebab('camelCase'), 'camel-case');
+  t.is(anyToKebab('kebab-case'), 'kebab-case');
 });
