@@ -1,3 +1,1 @@
-export default function(object, otherObject) {
-  return JSON.stringify(object) === JSON.stringify(otherObject);
-}
+export default (a, b) => JSON.stringify(a) === JSON.stringify(b);
