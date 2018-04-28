@@ -48,7 +48,7 @@ _@creuna/utils/deep-clone_
 * `object`: object
 * returns: object
 
-Returns a deep clone of an object (any nested objects or arrays will also be cloned)
+Returns a deep clone of an object (any nested objects or arrays will also be cloned). Be aware that this uses JSON.stringify, meaning that any array elements or object values that are `undefined` will be stripped
 
 ### fromQueryString(_queryString_)
 
@@ -91,6 +91,16 @@ _@creuna/utils/is-element-in-viewport_
 * returns: boolean
 
 Checks whether the given element is fully visible in the viewport
+
+### isEqual(_thing1, thing2_)
+
+_@creuna/utils/is-equal_
+
+* `thing1`: any
+* `thing1`: any
+* returns: boolean
+
+Checks whether two things are equal (deep comparison for objects and arrays). This uses JSON.stringify, so be aware that array elements or object values that are `undefined` will be stripped.
 
 ### kebabToCamel(_kebabString_)
 

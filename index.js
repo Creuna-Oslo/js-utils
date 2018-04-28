@@ -4,6 +4,7 @@ import deepClone from './deep-clone';
 import fromQueryString from './from-query-string';
 import getData from './get-data';
 import isElementInViewport from './is-element-in-viewport';
+import isEqual from './is-equal';
 import isRunningOnClient from './is-running-on-client';
 import kebabToCamel from './kebab-to-camel';
 import kebabToPascal from './kebab-to-pascal';
@@ -24,6 +25,7 @@ export default {
   fromQueryString,
   getData,
   isElementInViewport,
+  isEqual,
   isRunningOnClient,
   kebabToCamel,
   kebabToPascal,
