@@ -3,7 +3,7 @@ import test from 'ava';
 import clone from '../deep-clone';
 
 test('deep-clone: object', t => {
-  const original = { a: 1, b: 2 };
+  const original = { a: 1, b: 2, c: { d: 3 } };
   const cloned = clone(original);
 
   t.plan(2);
@@ -12,7 +12,7 @@ test('deep-clone: object', t => {
 });
 
 test('deep-clone: array', t => {
-  const original = [1, 2, 3];
+  const original = [1, 2, 3, [4, 5]];
   const cloned = clone(original);
 
   t.plan(2);
