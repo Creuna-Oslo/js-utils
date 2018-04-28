@@ -3,7 +3,7 @@ import test from 'ava';
 import clone from '../deep-clone';
 
 test('object', t => {
-  const original = { a: 1, b: 2 };
+  const original = { a: 1, b: 2, c: { d: 3 } };
   const cloned = clone(original);
 
   t.plan(2);
@@ -11,11 +11,15 @@ test('object', t => {
   t.not(cloned, original);
 });
 
-test('arrays', t => {
-  const original = [1, 2, 3];
+test('array', t => {
+  const original = [1, 2, 3, [4, 5]];
   const cloned = clone(original);
 
   t.plan(2);
   t.deepEqual(cloned, original);
   t.not(cloned, original);
+});
+
+test('undefined', t => {
+  t.is(clone(undefined), undefined);
 });

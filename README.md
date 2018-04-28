@@ -41,12 +41,12 @@ _@creuna/utils/clamp_
 
 `clamp` can be used to keep a value between a min and max value.
 
-### deepClone(_object_)
+### deepClone(_thing_)
 
 _@creuna/utils/deep-clone_
 
-* `object`: object
-* returns: object
+* `thing`: object | array
+* returns: object | array
 
 Returns a deep clone of an object (any nested objects or arrays will also be cloned). Be aware that this uses JSON.stringify, meaning that any array elements or object values that are `undefined` will be stripped
 
