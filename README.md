@@ -92,15 +92,15 @@ _@creuna/utils/is-element-in-viewport_
 
 Checks whether the given element is fully visible in the viewport
 
-### isEqual(_thing1, thing2_)
+### isEqual(_a, b_)
 
 _@creuna/utils/is-equal_
 
-* `thing1`: any
-* `thing1`: any
+* `a`: any
+* `b`: any
 * returns: boolean
 
-Checks whether two things are equal (deep comparison for objects and arrays). This uses JSON.stringify, so be aware that array elements or object values that are `undefined` will be stripped.
+Checks whether `a` and `b` are equal (deep comparison for objects and arrays). This uses `JSON.stringify`, so be aware that array elements or object values that are `undefined` will be stripped.
 
 ### kebabToCamel(_kebabString_)
 
