@@ -1,10 +1,11 @@
 {
   "name": "@creuna/utils",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "Creuna js utils",
   "main": "index.js",
   "files": ["*.js", "README.md", "LICENSE"],
   "scripts": {
+    "build": "node ./build/generate-index.js",
     "test": "ava"
   },
   "contributors": [

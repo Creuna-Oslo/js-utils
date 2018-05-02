@@ -1,8 +1,14 @@
 language: node_js
 node_js: "lts/*"
-branches:
-  only:
-  - master
 cache: yarn
 install: yarn
-test: yarn test
+script:
+  - yarn build
+  - yarn test
+deploy:
+  provider: npm
+  email: $NPM_EMAIL
+  api_key: $NPM_TOKEN
+  on:
+    branch: master
+  skip_cleanup: true
