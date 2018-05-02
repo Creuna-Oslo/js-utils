@@ -17,6 +17,14 @@
       "url": "https://github.com/asbjornh/"
     }
   ],
+  "homepage": "https://github.com/Creuna-Oslo/js-utils#readme",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Creuna-Oslo/js-utils.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Creuna-Oslo/js-utils/issues"
+  },
   "author": "asbjornh",
   "license": "MIT",
   "devDependencies": {
