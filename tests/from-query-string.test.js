@@ -1,6 +1,6 @@
 import test from 'ava';
 
-import fromQueryString from '../from-query-string';
+import fromQueryString from '../source/from-query-string';
 
 test('from-query-string', t => {
   const string = '?a=a&b=b';

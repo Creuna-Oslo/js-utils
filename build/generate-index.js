@@ -6,7 +6,7 @@ const chalk = require('chalk');
 const fs = require('fs');
 const path = require('path');
 
-const kebabToPascal = require('../kebab-to-pascal').default;
+const kebabToPascal = require('../source/kebab-to-pascal').default;
 
 function create(directory, outputFileName) {
   if (typeof directory !== 'string') {
@@ -98,4 +98,4 @@ function create(directory, outputFileName) {
   });
 }
 
-create(path.join(__dirname, '..'), 'index.js');
+create(path.join(__dirname, '..', 'source'), 'index.js');

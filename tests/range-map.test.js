@@ -1,6 +1,6 @@
 import test from 'ava';
 
-import rangeMap from '../range-map';
+import rangeMap from '../source/range-map';
 
 test('range-map', t => {
   t.plan(3);

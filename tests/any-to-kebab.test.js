@@ -1,6 +1,6 @@
 import test from 'ava';
 
-import anyToKebab from '../any-to-kebab';
+import anyToKebab from '../source/any-to-kebab';
 
 test('any-to-kebab', t => {
   t.plan(3);
