@@ -9,8 +9,8 @@ script: yarn build
 test: yarn test
 deploy:
   provider: npm
-  email: $NPM_TOKEN
-  api_key: $NPM_EMAIL
+  email: $NPM_EMAIL
+  api_key: $NPM_TOKEN
   on:
     branch: master
   skip_cleanup: true
