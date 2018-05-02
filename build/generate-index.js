@@ -52,7 +52,7 @@ function create(directory, outputFileName) {
     const keys = Object.keys(jsFiles);
 
     const importStatements = keys.reduce((accumulator, key) => {
-      accumulator += `import ${key} from './${jsFiles[key]}.js';\n`;
+      accumulator += `import ${key} from './${jsFiles[key]}';\n`;
       return accumulator;
     }, '');
 
