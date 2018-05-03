@@ -1,6 +1,6 @@
 import test from 'ava';
 
-import clamp from '../clamp';
+import clamp from '../source/clamp';
 
 test('clamp', t => {
   t.plan(3);

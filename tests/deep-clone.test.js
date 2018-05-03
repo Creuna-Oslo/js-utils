@@ -1,6 +1,6 @@
 import test from 'ava';
 
-import clone from '../deep-clone';
+import clone from '../source/deep-clone';
 
 test('object', t => {
   const original = { a: 1, b: 2, c: { d: 3 } };

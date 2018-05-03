@@ -1,6 +1,6 @@
 import test from 'ava';
 
-import toQueryString from '../to-query-string';
+import toQueryString from '../source/to-query-string';
 
 test('to-query-string', t => {
   t.plan(2);

@@ -1,6 +1,6 @@
 import test from 'ava';
 
-import stripUndefined from '../strip-undefined';
+import stripUndefined from '../source/strip-undefined';
 
 test('strip-undefined', t => {
   t.deepEqual(

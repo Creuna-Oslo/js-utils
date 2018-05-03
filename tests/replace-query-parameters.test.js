@@ -1,6 +1,6 @@
 import test from 'ava';
 
-import replaceQueryParameters from '../replace-query-parameters';
+import replaceQueryParameters from '../source/replace-query-parameters';
 
 test('replace-query-parameters', t => {
   const url = 'https://test.com?a=1&b=2&c=x';

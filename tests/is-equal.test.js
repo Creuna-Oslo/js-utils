@@ -1,6 +1,6 @@
 import test from 'ava';
 
-import isEqual from '../is-equal';
+import isEqual from '../source/is-equal';
 
 test('boolean', t => {
   t.plan(4);

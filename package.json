@@ -1,11 +1,13 @@
 {
   "name": "@creuna/utils",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "description": "Creuna js utils",
   "main": "index.js",
   "files": ["*.js", "README.md", "LICENSE"],
   "scripts": {
     "build": "node ./build/generate-index.js",
+    "copy": "node ./build/copy-files.js",
+    "clean": "node ./build/clean-files.js",
     "test": "ava"
   },
   "contributors": [
@@ -34,6 +36,7 @@
     "babel": "^6.23.0",
     "babel-eslint": "^8.2.3",
     "babel-preset-env": "^1.6.1",
+    "chalk": "^2.4.1",
     "eslint": "^4.19.1",
     "eslint-config-prettier": "^2.9.0",
     "eslint-plugin-prettier": "^2.6.0",
