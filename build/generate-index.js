@@ -73,7 +73,7 @@ function create(directory, outputFileName) {
     )}\n${exportStatement}\n`;
 
     fs.writeFile(
-      path.join(__dirname, '..', outputFileName),
+      path.join(__dirname, '..', 'source', outputFileName),
       fileContent,
       {},
       err => {
