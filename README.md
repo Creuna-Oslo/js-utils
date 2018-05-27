@@ -1,16 +1,16 @@
-# Creuna js utils
+# Creuna JS utils
 
 [![npm version](https://img.shields.io/npm/v/@creuna/utils.svg?style=flat)](https://www.npmjs.com/package/@creuna/utils)
 [![travis build](https://travis-ci.org/Creuna-Oslo/js-utils.svg?branch=master)](https://travis-ci.org/Creuna-Oslo/js-utils)
 
-A collection of useful js utility functions.
+A collection of useful JS utility functions.
 
 ## Importing
 
 You can choose whether you want to import everyting or individual modules.
 
 ```js
-// Import everyting:
+// Import everything:
 import utils from "@creuna/utils";
 
 // Import single:
@@ -28,6 +28,50 @@ _@creuna/utils/any-to-kebab_
 
 ```js
 anyToKebab("CamelCaseString"); // "camel-case-string"
+```
+
+### arrayInsert(_array, index, item_)
+
+_@creuna/utils/array-insert_
+
+* `array`: array
+* `index`: number
+* `item`: any
+* returns: array
+
+Returns a new array that is a deep clone of the one passed in containing the new item at the specified index.
+
+```js
+arrayInsert(["a", "b", "c"], 1, "x"); // ['a', 'x', 'b', 'c']
+```
+
+### arrayMove(_array, oldIndex, newIndex_)
+
+_@creuna/utils/array-move_
+
+* `array`: array
+* `oldIndex`: number
+* `newIndex`: number
+* returns: array
+
+Returns a new array that is a deep clone of the one passed in with the item at `oldIndex` moved to `newIndex`.
+
+```js
+arrayInsert(["a", "b", "c"], 1, 2); // ['a', 'c', 'b']
+```
+
+### arrayRemove(_array, index_)
+
+_@creuna/utils/array-remove_
+
+* `array`: array
+* `index`: number
+* returns: array
+
+Returns a new array that is a deep clone of the one passed in with the item at `index` removed.
+
+```js
+arrayInsert(["a", "b", "c"], 1); // ['a', 'c']
 ```
 
 ### clamp(_value, minimum, maximum_)
@@ -83,7 +127,7 @@ Returns the value of the first DOM node with `dataAttributeName`
 getData("some-attribute"); // "true"
 ```
 
-### isElementInViewport(node)
+### isElementInViewport(_node_)
 
 _@creuna/utils/is-element-in-viewport_
 
@@ -101,6 +145,18 @@ _@creuna/utils/is-equal_
 * returns: boolean
 
 Checks whether `a` and `b` are equal (deep comparison for objects and arrays). This uses `JSON.stringify`, so be aware that array elements or object values that are `undefined` will be stripped.
+
+### isRunningOnClient: _bool_
+
+_@creuna/utils/is-running-on-client_
+
+* exports: bool
+
+Exports a boolean indicating whether or not the code is running on the client.
+
+```js
+import isRunningOnClient from "@creuna/utils/is-running-on-client"; // true || false
+```
 
 ### kebabToCamel(_kebabString_)
 
@@ -124,7 +180,7 @@ _@creuna/utils/kebab-to-pascal_
 kebabToPascal("kebab-string"); // "KebabString"
 ```
 
-### rangeMap(val, inMin, inMax, outMin, outMax)
+### rangeMap(_val, inMin, inMax, outMin, outMax_)
 
 _@creuna/utils/range-map_
 
