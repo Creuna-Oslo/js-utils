@@ -1,4 +1,4 @@
-### rangeMap(val, inMin, inMax, outMin, outMax)
+### rangeMap(_val, inMin, inMax, outMin, outMax_)
 
 _@creuna/utils/range-map_
 

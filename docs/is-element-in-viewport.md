@@ -1,4 +1,4 @@
-### isElementInViewport(node)
+### isElementInViewport(_node_)
 
 _@creuna/utils/is-element-in-viewport_
 

@@ -1,4 +1,4 @@
-### arrayRemove(array, index)
+### arrayRemove(_array, index_)
 
 _@creuna/utils/array-remove_
 

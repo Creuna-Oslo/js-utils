@@ -1,4 +1,4 @@
-### isRunningOnClient
+### isRunningOnClient: _bool_
 
 _@creuna/utils/is-running-on-client_
 

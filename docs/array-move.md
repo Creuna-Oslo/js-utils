@@ -1,4 +1,4 @@
-### arrayMove(array, oldIndex, newIndex)
+### arrayMove(_array, oldIndex, newIndex_)
 
 _@creuna/utils/array-move_
 

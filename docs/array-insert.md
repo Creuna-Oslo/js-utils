@@ -1,4 +1,4 @@
-### arrayInsert(array, index, item)
+### arrayInsert(_array, index, item_)
 
 _@creuna/utils/array-insert_
 
