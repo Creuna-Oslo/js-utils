@@ -4,6 +4,8 @@ const chalk = require('chalk');
 const fs = require('fs');
 const path = require('path');
 
+console.log(`${chalk.dim('[UTILS]')} ✏️  Writing missing documentation files`);
+
 fs.readdir(path.join(__dirname, '..', 'source'), (err, possibleScriptFiles) => {
   const scriptFiles = possibleScriptFiles.filter(
     fileName => fileName.match(/\.js$/) && fileName !== 'index.js'
@@ -37,7 +39,10 @@ fs.readdir(path.join(__dirname, '..', 'source'), (err, possibleScriptFiles) => {
       missingDocFiles.forEach(missingDocFile => {
         fs.writeFile(
           path.join(__dirname, '..', 'docs', missingDocFile),
-          missingDocFile,
+          `### [TODO] Write documentation for ${missingDocFile.replace(
+            '.md',
+            '.js'
+          )}`,
           err => {
             if (!err) {
               console.log(

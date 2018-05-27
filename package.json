@@ -6,6 +6,8 @@
   "files": ["*.js", "README.md", "LICENSE"],
   "scripts": {
     "generate": "node ./build/generate-index.js",
+    "generate:docs":
+      "node ./build/generate-docs.js && node ./build/generate-readme.js",
     "build": "babel source -d .",
     "clean": "node ./build/clean-files.js",
     "test": "ava"

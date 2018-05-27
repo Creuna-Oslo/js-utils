@@ -4,6 +4,10 @@ const chalk = require('chalk');
 const fs = require('fs');
 const path = require('path');
 
+console.log(
+  `${chalk.dim('[UTILS]')} ✏️  Writing ${chalk.blueBright('README.md')}`
+);
+
 fs.readdir(path.join(__dirname, '..', 'docs'), (err, possibleDocFiles) => {
   const docFiles = possibleDocFiles.filter(
     fileName => fileName.match(/\.md$/) && fileName !== 'index.md'
