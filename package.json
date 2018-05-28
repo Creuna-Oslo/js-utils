@@ -1,6 +1,6 @@
 {
   "name": "@creuna/utils",
-  "version": "0.3.3",
+  "version": "0.3.4",
   "description": "Creuna js utils",
   "main": "index.js",
   "files": ["*.js", "README.md", "LICENSE"],
