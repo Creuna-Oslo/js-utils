@@ -1,4 +1,4 @@
-language: node_js
+jlanguage: node_js
 node_js: "lts/*"
 cache: yarn
 install: yarn
@@ -13,3 +13,8 @@ deploy:
   on:
     branch: master
   skip_cleanup: true
+notifications:
+  webhooks:
+    on_start: always
+    urls:
+      - secure: "jeJEhXI4usvSHtAYYDszegXB+byLE0t2lKKiAtSoXm9fz7tsy4egMmld+Az0awNyhgFUmYiA6Z97K8qDp1WqNSMM0qqGwYSoU4Q8PHOKxA7ZTys/MwpUYd9BWdibaGb/S0Lu9STJVLqM6vLxOQFOzExpar7OpLBEay9IhnXEkgrhaWlDTWNOr1JpCoWrEYiRa3WEIgJvQnWdrjDdszz37BX8FhndTArIbsPjrZ0XFf9rjbDqcEdXSKdkUWycuXkPIgkXs0AYR3Bo+X33DRxzZtlJZaz/2hc7czTw30CRxK+fMtvTW8JKmqN3Rj9gbjTe0/vdFuAOHj4Lui4HFIjbEDPWfTu0Hd90iqJGQKvxVVychx2a8uSvOddZQVcaMjQ/ApHG3uiAd2uITPML6BUIKORkq0ZTDwV5lxs09Jk1Brmd7Vuv3OW609j0FvA4y/n9TSkp+SZ2r87MuiEAAEzQRHS6khnEC80dXt7IQWPBw8M0jJXnwFvLWJh/2F1hO0jO35LFVBaJMajj4Po4WxorgKAAc3y3UMXI6bkyC/maoDo5OwbXLKXGhlsTUVnfPnxx3QiUAzINCi+MAM1NoRthcWqJU5f4JVHghOQc+xdk262/ICHQuDpdOzZ248OkY2FQjThbMrRctuSlfF8Cw6N1a1ZTsl+Cfcxt3hC2CFskKe4="
