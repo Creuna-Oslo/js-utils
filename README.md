@@ -137,7 +137,7 @@ _@creuna/utils/is-equal_
 
 Checks whether `a` and `b` are equal (deep comparison for objects and arrays). This uses `JSON.stringify`, so be aware that array elements or object values that are `undefined` will be stripped.
 
-### isFullyInViewport(_node_, _offset_)
+### isFullyInViewport(_node_)
 
 _@creuna/utils/is-fully-in-viewport_
 
@@ -146,7 +146,7 @@ _@creuna/utils/is-fully-in-viewport_
 
 Checks whether the given element is fully visible in the viewport. This is a special case of `isInViewport` where the offsets are the dimensions of the element.
 
-### isInViewport(_node_, _offset_)
+### isInViewport(_node, offset, offsetX_)
 
 _@creuna/utils/is-in-viewport_
 

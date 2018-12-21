@@ -1,4 +1,4 @@
-### isFullyInViewport(_node_, _offset_)
+### isFullyInViewport(_node_)
 
 _@creuna/utils/is-fully-in-viewport_
 
