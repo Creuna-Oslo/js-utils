@@ -94,17 +94,21 @@ _@creuna/utils/deep-clone_
 
 Returns a deep clone of an object (any nested objects or arrays will also be cloned). Be aware that this uses JSON.stringify, meaning that any array elements or object values that are `undefined` will be stripped
 
-### fromQueryString(_queryString_)
+### fromQueryString(_queryString[, prefix]_)
 
 _@creuna/utils/from-query-string_
 
-* `queryString`: string,
+* `queryString`: string
+* `prefix`: string (default `'?'`)
 * returns: object
 
 Converts a query string into an object.
 
 ```js
 fromQueryString("?param=test&other=test");
+// { param: "test", other: "test" }
+
+fromQueryString("#param=test&other=test", "#");
 // { param: "test", other: "test" }
 ```
 
@@ -282,15 +286,31 @@ _@creuna/utils/strip-undefined_
 
 Returns a shallow copy of `object` with properties matching `undefined` removed
 
-### toQueryString(_object, encode_)
+### toQueryString(_object[, options]_)
 
 _@creuna/utils/to-query-string_
 
 * `object`: object
-* `encode`: bool (default `true`)
+* `options`: object || bool (bool is used for `encode`)
+  * `encode`: bool (default `true`)
+  * `prefix`: string (default `'?'`)
 * returns: string
 
 Creates a query string representation of `object`. Encodes object values by default.
+
+```js
+toQueryString({ param: "test", other: "test" });
+// "?param=test&other=test"
+
+toQueryString({ param: "test foo", other: "test" });
+// "?param=test%20foo&other=test"
+
+toQueryString({ param: "test foo", other: "test" }, { encode: false });
+// "?param=test foo&other=test"
+
+toQueryString({ param: "test", other: "test" }, { prefix: "#" });
+// "#param=test&other=test"
+```
 
 ### tryParseJson(_json, default_)
 
