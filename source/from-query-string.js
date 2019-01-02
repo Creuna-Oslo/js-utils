@@ -1,10 +1,10 @@
-function fromQueryString(queryString) {
+function fromQueryString(queryString, prefix = '?') {
   if (!queryString) {
     return {};
   }
 
   return queryString
-    .replace('?', '')
+    .replace(prefix, '')
     .split('&')
     .reduce((accumulator, currentPair) => {
       const data = currentPair.split('=');

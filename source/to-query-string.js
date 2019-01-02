@@ -1,14 +1,36 @@
-function toQueryString(queryObject, encode = true) {
+import stripUndefined from './strip-undefined';
+
+const defaultOptions = {
+  encode: true,
+  prefix: '?'
+};
+
+const getOptionsToUse = options => {
+  // NOTE: For backwards compatibility with previous API
+  if (typeof options === 'boolean') {
+    return Object.assign({}, defaultOptions, {
+      encode: options
+    });
+  }
+
+  return Object.assign({}, defaultOptions, stripUndefined(options));
+};
+
+function toQueryString(queryObject, options = {}) {
+  const optionsToUse = getOptionsToUse(options);
+
   return Object.keys(queryObject)
     .filter(key => queryObject[key] !== undefined)
     .reduce((accumulator, currentKey, currentIndex) => {
       const currentValue = queryObject[currentKey];
-      const separator = currentIndex === 0 ? '?' : '&';
 
       if (currentValue !== undefined) {
-        accumulator = `${accumulator}${separator}${
-          encode ? encodeURIComponent(currentKey) : currentKey
-        }=${encode ? encodeURIComponent(currentValue) : currentValue}`;
+        const separator = currentIndex === 0 ? optionsToUse.prefix : '&';
+        const [key, value] = optionsToUse.encode
+          ? [encodeURIComponent(currentKey), encodeURIComponent(currentValue)]
+          : [currentKey, currentValue];
+
+        accumulator = `${accumulator}${separator}${key}=${value}`;
       }
 
       return accumulator;
