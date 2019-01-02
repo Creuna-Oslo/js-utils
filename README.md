@@ -146,7 +146,7 @@ _@creuna/utils/is-fully-in-viewport_
 
 Checks whether the given element is fully visible in the viewport. This is a special case of `isInViewport` where the offsets are the dimensions of the element.
 
-### isInViewport(_node, offset, offsetX_)
+### isInViewport(_node, offset[, offsetX]_)
 
 _@creuna/utils/is-in-viewport_
 

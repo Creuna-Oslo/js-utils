@@ -1,4 +1,4 @@
-### isInViewport(_node, offset, offsetX_)
+### isInViewport(_node, offset[, offsetX]_)
 
 _@creuna/utils/is-in-viewport_
 
