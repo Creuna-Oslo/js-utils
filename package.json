@@ -1,10 +1,11 @@
 {
   "name": "@creuna/utils",
-  "version": "0.4.0",
+  "version": "1.0.0",
   "description": "Creuna js utils",
   "main": "index.js",
   "files": [
     "*.js",
+    "CHANGELOG.md",
     "README.md",
     "LICENSE"
   ],
@@ -36,16 +37,18 @@
   "author": "asbjornh",
   "license": "MIT",
   "devDependencies": {
-    "@babel/cli": "^7.2.0",
-    "@babel/preset-env": "^7.2.0",
+    "@babel/cli": "^7.2.3",
+    "@babel/core": "^7.2.2",
+    "@babel/preset-env": "^7.2.3",
     "@babel/register": "^7.0.0",
-    "ava": "^1.0.1",
+    "ava": "1.0.1",
     "babel-eslint": "^10.0.1",
     "chalk": "^2.4.1",
     "eslint": "^5.10.0",
     "eslint-config-prettier": "^3.3.0",
     "eslint-plugin-prettier": "^3.0.0",
-    "prettier": "^1.15.3"
+    "prettier": "^1.15.3",
+    "proxyquire": "^2.1.0"
   },
   "ava": {
     "require": [

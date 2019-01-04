@@ -131,15 +131,6 @@ Returns the value of the first DOM node with `dataAttributeName`
 getData("some-attribute"); // "true"
 ```
 
-### isElementInViewport(_node_)
-
-_@creuna/utils/is-element-in-viewport_
-
-* `node`: DOM node
-* returns: boolean
-
-Checks whether the given element is fully visible in the viewport
-
 ### isEqual(_a, b_)
 
 _@creuna/utils/is-equal_
@@ -149,6 +140,26 @@ _@creuna/utils/is-equal_
 * returns: boolean
 
 Checks whether `a` and `b` are equal (deep comparison for objects and arrays). This uses `JSON.stringify`, so be aware that array elements or object values that are `undefined` will be stripped.
+
+### isFullyInViewport(_node_)
+
+_@creuna/utils/is-fully-in-viewport_
+
+* `node`: DOM node
+* returns: boolean
+
+Checks whether the given element is fully visible in the viewport. This is a special case of `isInViewport` where the offsets are the dimensions of the element.
+
+### isInViewport(_node, offset[, offsetX]_)
+
+_@creuna/utils/is-in-viewport_
+
+* `node`: DOM node
+* `offset`: number
+* `offsetX`: number (defaults to `offset`)
+* returns: boolean
+
+Checks whether the given element is visible in the viewport. Positive numbers for `offset` mean more of the element needs to be in the viewport while negative numbers mean that the element can be outside of the viewport.
 
 ### isRunningOnClient: _bool_
 
