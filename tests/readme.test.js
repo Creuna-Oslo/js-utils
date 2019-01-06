@@ -18,25 +18,8 @@ test('documents all modules', t => {
     : t.pass();
 });
 
-test.cb('has no [TODO]s', t => {
-  fs.readFile(
-    path.join(__dirname, '..', 'README.md'),
-    'utf8',
-    (err, readme) => {
-      if (!readme) {
-        t.fail("Can't find `README.md`");
-        t.end();
-        return;
-      }
+test('has no [TODO]s', t => {
+  const readme = fs.readFileSync(path.resolve(__dirname, '..', 'README.md'));
 
-      if (readme.includes('[TODO]')) {
-        t.fail(`README has [TODO]s.`);
-        t.end();
-        return;
-      }
-
-      t.pass();
-      t.end();
-    }
-  );
+  readme.includes('[TODO]') ? t.fail(`README has [TODO]s.`) : t.pass();
 });
