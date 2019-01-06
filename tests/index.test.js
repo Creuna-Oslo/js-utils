@@ -2,7 +2,7 @@ import fs from 'fs';
 import path from 'path';
 import test from 'ava';
 
-test.cb('imports all utils', t => {
+test('imports all utils', t => {
   const fileNames = fs
     .readdirSync(path.resolve(__dirname, '..', 'source'))
     .filter(fileName => fileName.match(/\.js$/) && fileName !== 'index.js')
