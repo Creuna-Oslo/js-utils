@@ -1,9 +1,13 @@
 # Changelog
 
-# 1.0.0
+## 1.1.0
 
-* Renames `isElementInViewport` to `isFullyInViewport`
-* Adds `isInViewport`
+- Adds `pipe` and `pipeValue`
+
+## 1.0.0
+
+- Renames `isElementInViewport` to `isFullyInViewport`
+- Adds `isInViewport`
 
 ## 0.4.0
 
