@@ -85,6 +85,23 @@ _@creuna/utils/clamp_
 
 `clamp` can be used to keep a value between a min and max value.
 
+### createPipe(_...functions_)
+
+_@creuna/utils/create-pipe_
+
+- `functions`: any number of functions
+- returns: function
+
+The pipe combines n functions, calling each function with the output of the last one. To actually execute the pipeline, call the returned function with a value. More on this concept [here](https://medium.com/front-end-weekly/pipe-and-compose-in-javascript-5b04004ac937).
+
+```js
+pipe(
+  removeSpaces,
+  capitalize,
+  reverseString
+)("a b c"); // "CBA"
+```
+
 ### deepClone(_thing_)
 
 _@creuna/utils/deep-clone_
@@ -208,18 +225,7 @@ Similar to `pipe` but accepts a value as the first argument.
 ```js
 pipeValue("a b c", removeSpaces, capitalize, reverseString); // "CBA"
 ```
-### pipe(_...functions_)
 
-_@creuna/utils/pipe_
-
-* `functions`: any number of functions
-* returns: function
-
-The pipe combines n functions, calling each function with the output of the last one. To actually execute the pipeline, call the returned function with a value. More on this concept [here](https://medium.com/front-end-weekly/pipe-and-compose-in-javascript-5b04004ac937).
-
-```js
-pipe(removeSpaces, capitalize, reverseString)("a b c"); // "CBA"
-```
 ### rangeMap(_val, inMin, inMax, outMin, outMax_)
 
 _@creuna/utils/range-map_

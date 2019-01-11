@@ -1,3 +1,3 @@
-import pipe from './pipe';
+import createPipe from './create-pipe';
 
-export default (value, ...functions) => pipe(...functions)(value);
+export default (value, ...functions) => createPipe(...functions)(value);

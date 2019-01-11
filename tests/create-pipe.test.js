@@ -1,6 +1,6 @@
 import test from 'ava';
 
-import pipe from '../source/pipe';
+import createPipe from '../source/create-pipe';
 
 // These tests are a bit contrived since many of the native things can already be chained.
 
@@ -14,12 +14,12 @@ const template = (t, input, pipeline, expected) => {
   t.is(expected, pipeline(input));
 };
 
-test('1', template, 'h e l l o', pipe(capitalize, removeSpaces), 'HELLO');
-test('2', template, 'a1b2c3', pipe(removeNonNumbers, Number), 123);
+test('1', template, 'h e l l o', createPipe(capitalize, removeSpaces), 'HELLO');
+test('2', template, 'a1b2c3', createPipe(removeNonNumbers, Number), 123);
 test(
   '3',
   template,
   { a: 1, b: 2 },
-  pipe(Object.entries, map(tuple => tuple[1]), sum),
+  createPipe(Object.entries, map(tuple => tuple[1]), sum),
   3
 );
