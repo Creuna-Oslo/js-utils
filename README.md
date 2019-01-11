@@ -212,15 +212,15 @@ _@creuna/utils/kebab-to-pascal_
 kebabToPascal("kebab-string"); // "KebabString"
 ```
 
-### pipeValue(_value, ...functions_)
+### pipe(_value, ...functions_)
 
-_@creuna/utils/pipe-value_
+_@creuna/utils/pipe_
 
-* `value`: any value
-* `functions`: any number of functions
-* returns: any (the result of running `value` through the pipeline)
+- `value`: any value
+- `functions`: any number of functions
+- returns: any (the result of running `value` through the pipeline)
 
-Similar to `pipe` but accepts a value as the first argument.
+A function that emulates the [pipeline operator](https://github.com/tc39/proposal-pipeline-operator). For more advanced composition stuff, see `createPipe`.
 
 ```js
 pipeValue("a b c", removeSpaces, capitalize, reverseString); // "CBA"
