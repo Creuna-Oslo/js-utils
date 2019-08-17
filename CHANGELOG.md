@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.2.0
+
+- Adds `filterObject` and `stripPropertiesWithKeys`
+
 ## 1.1.0
 
 - Adds `pipe` and `pipeValue`

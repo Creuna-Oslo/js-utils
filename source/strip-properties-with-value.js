@@ -1,11 +1,5 @@
-function stripPropertiesWithValue(object, value) {
-  return Object.keys(object).reduce((accumulator, key) => {
-    if (object[key] !== value) {
-      Object.assign(accumulator, { [key]: object[key] });
-    }
+import filterObject from './filter-object';
 
-    return accumulator;
-  }, {});
+export default function stripPropertiesWithValue(object, valueToStrip) {
+  return filterObject(object, (_key, value) => value !== valueToStrip);
 }
-
-export default stripPropertiesWithValue;

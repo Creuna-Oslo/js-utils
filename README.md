@@ -111,6 +111,21 @@ _@creuna/utils/deep-clone_
 
 Returns a deep clone of an object (any nested objects or arrays will also be cloned). Be aware that this uses JSON.stringify, meaning that any array elements or object values that are `undefined` will be stripped
 
+### filterObject(_object, predicate_)
+
+_@creuna/utils/filter-object_
+
+- `object`: object
+- `value`: (key: string, value: any): boolean
+- returns: object
+
+Tests `predicate` (with `key` and `value`) for every entry in `object`. Returns a new object that contains every entry that passed the test.
+
+```js
+const obj = { a: 1, b: 2, c: 3 };
+filterObject(obj, (key, value) => key !== "b" && value !== 3); // { a: 1 }
+```
+
 ### fromQueryString(_queryString[, prefix]_)
 
 _@creuna/utils/from-query-string_
@@ -291,6 +306,21 @@ import scrollingElement from "@creuna/utils/scrolling-element";
 if (scrollingElement) {
   scrollingElement.scrollTo(0, 100);
 }
+```
+
+### stripPropertiesWithKeys(_object, keys_)
+
+_@creuna/utils/strip-properties-with-keys_
+
+- `object`: object
+- `value`: string[]
+- returns: object
+
+Returns a shallow copy of `object` with properties matching any of the `keys` removed
+
+```js
+const obj = { a: 1, b: 2, c: 3 };
+stripPropertiesWithKeys(obj, ["b", "c"]); // { a: 1 }
 ```
 
 ### stripPropertiesWithValue(_object, value_)
